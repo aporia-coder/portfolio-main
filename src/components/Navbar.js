@@ -1,4 +1,5 @@
 import React from "react";
+import { IS_CV_ENABLED } from "../settings";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import styled from "styled-components";
@@ -39,14 +40,16 @@ const Navbar = () => {
               animate={{ width: pathname === "/projects" ? "50%" : "0%" }}
             />
           </motion.li>
-          <motion.li>
+          {IS_CV_ENABLED && (
+            <motion.li>
             <NavLink to="/resume">My CV</NavLink>
             <NavLine
               transition={{ duration: 0.75 }}
               initial={{ width: "0%" }}
               animate={{ width: pathname === "/resume" ? "50%" : "0%" }}
-            />
-          </motion.li>
+              />
+            </motion.li>
+            )}
           <motion.li>
             <NavLink to="/contact">Contact me</NavLink>
             <NavLine

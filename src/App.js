@@ -1,4 +1,5 @@
 import React from "react";
+import { IS_CV_ENABLED } from "./settings";
 import { Switch, Route, useLocation } from "react-router-dom";
 
 // Icons
@@ -33,7 +34,9 @@ function App() {
           <Route path="/skills" component={Skills} />
           <Route exact path="/projects" component={Projects} />
           <Route path="/projects/:id" component={SingleProject} />
-          <Route path="/resume" component={Resume} />
+          {IS_CV_ENABLED && (
+            <Route path="/resume" component={Resume} />
+          )}
           <Route path="/contact" component={Contact} />
           <Route component={ErrorPage} />
         </Switch>
