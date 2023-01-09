@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </a>
           </IconBackground>
-          <p>Copyright &copy; 2022 Zachary Gray</p>
+          <p>Copyright &copy; {new Date().getFullYear()} Zachary Gray</p>
           <IconBackground
             variants={footerIconAnim}
             initial="hidden"
