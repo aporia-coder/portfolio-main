@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IS_CV_ENABLED } from "./settings";
 import { Switch, Route, useLocation } from "react-router-dom";
+import { aporiaAscii } from "./utilities/asciiArt";
 
 // Icons
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -25,6 +26,11 @@ import Resume from "./pages/Resume";
 function App() {
   library.add(fab);
   const location = useLocation();
+
+  useEffect(() => {
+    console.log(aporiaAscii)
+  }, [])
+
   return (
     <>
       <Navbar />
