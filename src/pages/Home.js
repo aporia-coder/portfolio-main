@@ -6,7 +6,6 @@ import { pageOut } from "../utilities/animations";
 
 // Components
 import About from "../components/About";
-import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   useEffect(() => {
@@ -16,7 +15,6 @@ const Home = () => {
   return (
     <motion.div variants={pageOut} initial="hidden" animate="show" exit="exit">
       <About />
-      <Testimonials />
     </motion.div>
   );
 };

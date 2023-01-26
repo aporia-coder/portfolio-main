@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 // Images
-import zac from "../assets/images/zac.jpg";
 import Wave from "./Wave";
 
 // Components
@@ -57,19 +56,6 @@ const About = () => {
           <Button to="/projects">My Projects</Button>
           <Button to="/resume">My Skills</Button>
         </InfoContainer>
-        <ImgContainer>
-          <ProfileImage
-            src={zac}
-            alt="Picture of me"
-            variants={heroImgAnimation}
-            whileHover={{
-              scale: 1.02,
-              transition: { duration: 0.5, ease: "easeInOut" },
-            }}
-            initial="hidden"
-            animate="show"
-          />
-        </ImgContainer>
       </Container>
       <Wave />
     </Description>

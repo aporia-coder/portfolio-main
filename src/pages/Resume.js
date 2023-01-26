@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import cv from "../assets/images/cv/cv.jpg";
-import cvPdf from "../assets/cv/cv.pdf";
 
 // Animation
 import { motion } from "framer-motion";
@@ -30,9 +28,6 @@ const Resume = () => {
         <p>Click the picture to open a PDF in a new tab!</p>
         <ImageContainer>
           <Hidden>
-            <a href={cvPdf} target="_blank">
-              <img src={cv} alt="My CV" />
-            </a>
           </Hidden>
         </ImageContainer>
       </Container>
